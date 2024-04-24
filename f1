@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('stage-1') {
+            steps {
+                sh 'touch file2'
+                echo '"hai all this is my file2" > file2'
+                sh 'mv file2 file3'
+            }
+        }
+    }
+}
